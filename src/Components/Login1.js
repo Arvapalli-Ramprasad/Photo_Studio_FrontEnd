@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 // for global setting of fun or variable
 import UserContext from './Context/UserContext'
 import api from './api'
+import "./Login1.css"
 
 const Login1 = () => {
     const[updateValue,setUpdateValue]=useState({email:"",password:""})
@@ -94,4 +95,4 @@ const Login1 = () => {
 
 )}
 
-    export default Login1
+export default Login1
