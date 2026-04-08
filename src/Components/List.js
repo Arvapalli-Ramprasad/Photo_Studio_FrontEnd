@@ -21,9 +21,9 @@ const List = () => {
 
  // when we reload this logic sets the token if it exists in the local storage
  useEffect(()=>{
-    if(token==""){
+    if(token===""){
         let localToken = localStorage.getItem("token")
-        if(localToken==undefined){
+        if(localToken===undefined){
             navigate("/login")
         }else{
             setToken(JSON.parse(localToken))

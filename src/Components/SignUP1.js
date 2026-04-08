@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import axios from 'axios'
+// import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import api from './api'
 
@@ -23,7 +23,7 @@ const SignUp1 = () => {
             return
         }
 
-        if(updateValue.password!=updateValue.confirmPassword){
+        if(updateValue.password!==updateValue.confirmPassword){
             setMessage("Passord Mismatch")
             return
         }

@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import './App.css';
-import Login from './Components/Login';
-import SignUp from './Components/SignUp';
+// import Login from './Components/Login';
+// import SignUp from './Components/SignUp';
 
-import RoomList from './Components/roomList'
-import Display from './Components/display';
-import Apis from './Components/apis';
-import Renderproducts from './Components/renderproducts';
+// import RoomList from './Components/roomList'
+// import Display from './Components/display';
+// import Apis from './Components/apis';
+// import Renderproducts from './Components/renderproducts';
 import Login1 from './Components/Login1';
 import SignUp1 from './Components/SignUP1';
 
@@ -19,11 +19,11 @@ import MediaPage from './Components/MediaPage';
 
 function App() {
 
-    const [selectedRoom, setSelectedRoom] = useState(null)
+    // const [selectedRoom, setSelectedRoom] = useState(null)
 
 
     // api testing things
-    const [products, setProducts] = useState(null)
+    // const [products, setProducts] = useState(null)
 
      {/* setting the token */}
     // const [token, setToken] = useState("")
