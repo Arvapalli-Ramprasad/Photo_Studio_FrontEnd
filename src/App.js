@@ -1,12 +1,12 @@
 // import React, { useState } from 'react';
 import './App.css';
-// import Login from './Components/Login';
-// import SignUp from './Components/SignUp';
+import Login from './Components/Login';
+import SignUp from './Components/SignUp';
 
-// import RoomList from './Components/roomList'
-// import Display from './Components/display';
-// import Apis from './Components/apis';
-// import Renderproducts from './Components/renderproducts';
+import RoomList from './Components/roomList'
+import Display from './Components/display';
+import Apis from './Components/apis';
+import Renderproducts from './Components/renderproducts';
 import Login1 from './Components/Login1';
 import SignUp1 from './Components/SignUP1';
 
