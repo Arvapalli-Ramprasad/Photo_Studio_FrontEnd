@@ -1,0 +1,418 @@
+
+
+
+
+/* Login css */
+/* FULL PAGE BACKGROUND */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+/* BACK BUTTON (NEW) */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  border: none;
+  color: #38bdf8;
+  font-size: 28px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  transform: scale(1.2);
+  color: #6366f1;
+}
+
+/* CENTER THE FORM */
+.login1 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FORM CARD */
+.login1 form {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* TITLE */
+.login1 h1 {
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+
+/* ERROR MESSAGE */
+.login1 h1[style] {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* INPUTS */
+.login1 input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #1e293b;
+  color: white;
+  font-size: 14px;
+  border: 1px solid #334155;
+  transition: 0.3s;
+}
+
+/* INPUT FOCUS EFFECT */
+.login1 input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 8px #38bdf8;
+}
+
+/* MAIN FORM BUTTON ONLY */
+.login1 form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(45deg, #38bdf8, #6366f1);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+.login1 form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(56, 189, 248, 0.5);
+}
+
+/* PLACEHOLDER */
+.login1 input::placeholder {
+  color: #94a3b8;
+}
+
+
+/* list render css */
+/* PAGE BACKGROUND */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #0f172a, #1e293b);
+  color: white;
+}
+
+/* MAIN CONTAINER */
+.rooms {
+  padding: 30px;
+  text-align: center;
+}
+
+/* BUTTONS CONTAINER (OPTIONAL ALIGNMENT) */
+.rooms button {
+  margin: 10px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* GET USERS BUTTON */
+.rooms button:first-of-type {
+  background: linear-gradient(45deg, #22c55e, #16a34a);
+  color: white;
+}
+
+.rooms button:first-of-type:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(34, 197, 94, 0.5);
+}
+
+/* LOGOUT BUTTON */
+.rooms button:last-of-type {
+  background: linear-gradient(45deg, #ef4444, #dc2626);
+  color: white;
+}
+
+.rooms button:last-of-type:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.5);
+}
+
+/* USERS GRID */
+.rooms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* USER CARDS */
+.items {
+  width: 350px;
+  background: rgba(255, 255, 255, 0.05);
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.items:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+}
+
+/* TEXT */
+.items h1 {
+  font-size: 20px;
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.items p {
+  font-size: 14px;
+  color: #cbd5f5;
+}
+
+/* EMPTY STATE */
+.rooms:empty::after {
+  content: "No users loaded yet 👀";
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+
+
+
+
+/* image css cards */
+
+/* ===== Page Setup ===== */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #f8fafc;
+}
+
+.media-page {
+  padding: 20px;
+  max-width: 1000x;
+  margin: 0 auto;
+}
+
+/* ===== Header ===== */
+.media-page h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #3b82f6;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* ===== Controls ===== */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.controls input[type="file"] {
+  padding: 6px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.controls button {
+  padding: 8px 16px;
+  background: #3b82f6;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.controls button:hover {
+  background: #2563eb;
+}
+
+/* ===== Progress Bar ===== */
+.progress-container {
+  max-width: 600px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.progress-bar {
+  width: 100%;
+  background: #334155;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.progress-bar-inner {
+  height: 100%;
+  background: #3b82f6;
+  width: 0%;
+  transition: width 0.3s ease;
+  border-radius: 6px;
+}
+
+/* ===== Grid ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: #3bf6e6;
+  transform: translateY(-3px);
+}
+
+.card img, .card video {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.card.selected {
+  border-color: #f87171;
+}
+
+/* Checkbox */
+.card input[type="checkbox"] {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  transform: scale(1.2);
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* ===== Lightbox ===== */
+.lightbox {
+  position: relative;
+  margin: 20px auto;
+  max-width: 80%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+}
+
+.lightbox.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 9999;
+  border-radius: 0;
+}
+
+.lightbox img, .lightbox video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ===== Arrows ===== */
+.lightbox .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(59, 130, 246, 0.7);
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  padding: 12px 18px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.lightbox .arrow:hover {
+  background: rgba(59, 130, 246, 1);
+}
+
+.lightbox .arrow.left {
+  left: 10px;
+}
+
+.lightbox .arrow.right {
+  right: 10px;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .lightbox {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .lightbox {
+    height: 250px;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+}

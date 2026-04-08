@@ -1,0 +1,440 @@
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #f8f9fa, #eef1f5);
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* ================= HEADER ================= */
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 15px 30px;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  z-index: 100;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: 700;
+  color: green;
+  /* color: #000000; */
+  margin-bottom: 10px;
+  font-family: "Sofia", sans-serif;
+  /* font-size: 30px; */
+  text-shadow: 3px 3px 3px #ababab;
+}
+
+/* NAVIGATION */
+.header nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.header nav a,
+.header nav button {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 30px;
+  transition: 0.3s;
+  border: none;
+  background: transparent;
+}
+
+.header nav a:hover,
+.header nav button:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* TAGLINE */
+.header p {
+  font-size: 1rem;
+  color: green;
+  text-align: center;
+}
+
+/* SEARCH */
+.search {
+  margin-top: 12px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  width: 100%;
+  max-width: 400px;
+  outline: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.search:focus {
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 80vh;
+  background: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-text {
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+  max-width: 700px;
+  animation: fadeIn 1.2s ease;
+}
+
+.hero-text h2 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.hero-btn {
+  padding: 12px 30px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(45deg, #ff6b6b, #ff4757);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+  padding: 80px 20px;
+  background: linear-gradient(to right, #f8f9fa, #eef1f5); /* match body */
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  font-family: "Sofia", sans-serif;
+  color: #222;
+}
+
+/* Center container */
+.about-div {
+  display: flex;
+  justify-content: center;
+}
+
+/* Card */
+.about-div p {
+  max-width: 700px;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 20px;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #444;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border-left: 6px solid green; /* matches your logo color */
+  transition: all 0.35s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Subtle glow effect */
+.about-div p::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(120deg, transparent, rgba(0, 128, 0, 0.15), transparent);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+/* Hover animation */
+.about-div p:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Glow on hover */
+.about-div p:hover::before {
+  opacity: 1;
+}
+
+/* ================= EVENTS ================= */
+.event-grid {
+  padding: 80px 30px;
+  background: #000000;
+  text-align: center;
+}
+
+/* FIXED GRID LAYOUT */
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  align-items: stretch;
+}
+
+/* HEADINGS FULL WIDTH */
+.event-grid h2,
+.events-description {
+  grid-column: 1 / -1;
+}
+
+/* EVENT CARD */
+.event-card {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: 0.4s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* IMAGE FIX */
+.event-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* CONTENT OVERLAY */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  color: #fff;
+  z-index: 2;
+}
+
+/* DARK GRADIENT */
+.event-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  z-index: 1;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  margin-top: 5px;
+  background: crimson;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background: #a10000;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #111;
+  color: #ddd;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.footer h2 {
+  margin-bottom: 15px;
+}
+
+.footer p {
+  margin-bottom: 5px;
+}
+
+.footer .social {
+  margin: 15px 0;
+}
+
+.footer .social a {
+  color: #ddd;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer .social a:hover {
+  color: blue;
+}
+
+.footer .copyright {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* ================= MODAL ================= */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.modal {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 550px;
+  width: 90%;
+  position: relative;
+  animation: popup 0.3s ease;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  background: #ff6b6b;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.close-btn::before {
+  content: "✖";
+}
+
+.close-btn:hover {
+  background: #ff4757;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 25px;
+  background: #25D366;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.insta-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.insta-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .event-card {
+    width: 90%;
+  }
+
+  .header {
+    padding: 15px;
+  }
+}
