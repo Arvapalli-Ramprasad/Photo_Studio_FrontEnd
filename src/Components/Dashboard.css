@@ -422,6 +422,26 @@ body {
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
+
+  .header {
+    position: static; /* removes sticky */
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .header nav {
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+
+  .hero {
+    height: 60vh;
+  }
+
+
   .hero-text h2 {
     font-size: 2.2rem;
   }
